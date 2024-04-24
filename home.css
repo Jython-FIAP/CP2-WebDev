@@ -83,8 +83,9 @@ a {
     font-weight: 600;
     transition: var(--transition); 
 } a:hover {
-    color: var(--color-purple);
+    color: var(--color-orange);
 }
+
 
 .container {
     width: 100%;
