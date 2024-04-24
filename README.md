@@ -10,3 +10,10 @@ Participantes:
 ```
 
 ## Informações sobre o Projeto 
+Página Index.Html
+- Responsável pela verificação de idade do usuário podendo assim entrar na página home.html
+
+Página Home.Html 
+- Responsável por carregar todo o conteúdo principal da página
+
+## Branchs 
