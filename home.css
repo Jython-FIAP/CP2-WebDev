@@ -133,12 +133,33 @@ a {
     padding: 20px;
 
     box-shadow: 1px 1px 20px #ccc;
-    transition: scale .7s;
     border-radius: 7px;
+    transition: transform 0.3s ease;
+
+    position: relative;
 
 } .vinhos-item:hover {
-    scale: 1.1s;
-} 
+    transform: scale(1.1);
+}
+
+.vinhos-item::after {
+    content: attr(data-desc); /* Inicialmente, o conteúdo está vazio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}.vinhos-item:hover::after {
+    opacity: 1;
+}
+
 .vinhos-item img {
     width: 20%;
 }
