@@ -3,13 +3,22 @@
 function confirmAge() {
     var isOver18 = confirm("Você tem mais de 18 anos?");
     if (isOver18) {
-        window.location.href = "login.html"; // Página inicial
+        window.location.href = "home.html"; // Página inicial
     } else {
         window.location.href = "https://github.com/Jython-FIAP/CP2-WebDev"; // Site para menores de 18 anos
     }
 }
 
 // -------------------------------- // 
+
+// Chamada Login
+function Login() {
+    var container_login = document.getElementById("container_login");
+    var container = document.getElementById("container");
+
+    container_login.style.display = "flex";
+    container.style.display = "none";
+}
 
 
 // Formulário de Login
@@ -21,12 +30,18 @@ const userc = { name: "1234", password: "1234" };
 
 const handleLogin = (event) => {
     event.preventDefault();
-
+    
     const enteredUsername = loginInputUser.value;
     const enteredPassword = loginInputPassword.value;
-
+    
     if (userc.name === enteredUsername && userc.password === enteredPassword) {
-        window.location.href = "home.html";
+        var container_login = document.getElementById("container_login");
+        var container = document.getElementById("container");
+
+    
+        container_login.style.display = "none";
+        container.style.display = "block";
+     
     } else {
         alert("Dados incorretos, tente novamente.");
     }

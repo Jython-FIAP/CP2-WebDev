@@ -9,8 +9,23 @@
 
 </head>
 <body>
-    
-    <div class="container">
+    <section class="container_login" id="container_login">
+        <header class="Cabecalho-Page-1"> 
+        </header> 
+        <h1> VINICOLA AGNELLO </h1>
+
+
+        <section class="login">
+            <h2>Faça seu Login</h2>
+            <form class="login__form" id="loginForm">
+                <input type="text" class="login__input" id="user" placeholder="USUÁRIO" required />
+                <input type="password" class="login__input" id="password" placeholder="SENHA" required />
+                <button type="submit" class="login__button">Login</button>
+            </form>
+        </section>
+    </section>
+
+    <div class="container" id="container">
         <header class="Cabecalho-Page"> 
             <h1> Vinicola Agnello </h1>
 
@@ -19,6 +34,7 @@
                     <li><a href="#vinhos">Vinhos</a></li>
                     <li><a href="">Perfil</a></li>
                     <li><a href="#contato">Contato</a></li>
+                    <li><button type="button" id="Entrar" onclick="Login()">Entrar</button></li>
                 </ul>
             </nav>
         </header> 
@@ -28,81 +44,81 @@
             <p> O nosso desejo é que os nossos vinhos percorram os tempos e continue a encantar seus amantes ao longo dos anos.. </p>
                 <a href="#" class="btn"> Conheça a Agnello</a>
         </section>
-    </div>
-
-    <!-- Cards de Vinhos -->
-    <section class="vinhos" id="vinhos"> 
-        <h2> Conheça nossos Vinhos mais vendidos: </h2> 
         
+        <!-- Cards de Vinhos -->
+        <section class="vinhos" id="vinhos"> 
+            <h2> Conheça nossos Vinhos mais vendidos: </h2> 
+            
             <div class="vinhos-classes">  <!-- Container Flexivél -->
- 
+                
                 <!-- 1. Vinho -->
                 <div class="vinhos-item" data-desc="Um vinho encantador e intrigante que desperta os sentidos com sua profunda complexidade aromática e notas sedutoras de frutas maduras, combinadas harmoniosamente com uma elegante estrutura tânica."> 
-                        <img src="./img/garrafas/vinho01.png" alt="--">
-                        <h3> Vinho Neugebauer </h3>
-                        <p> R$ 240.00 </p>
+                    <img src="./img/garrafas/vinho01.png" alt="--">
+                    <h3> Vinho Neugebauer </h3>
+                    <p> R$ 240.00 </p>
                 </div>
-
+                
                 <!-- 2. Vinho -->
                 <div class="vinhos-item" data-desc="Um vinho que brilha com uma luminosidade única, revelando uma paleta de aromas vivazes e cativantes. Sua suavidade sedosa e sabor exuberante criam uma jornada sensorial que encanta e inspira."> 
                     <img src="./img/garrafas/vinho02.png" alt="--">
                     <h3> Miragem de Outono </h3>
                     <p> R$ 300.00 </p>
                 </div>
-
+                
                 <!-- 3. Vinho -->
                 <div class="vinhos-item" data-desc="Um vinho delicado que acaricia o paladar com sua suavidade refrescante e notas sutis de frutas frescas. "> 
-                    <img src="./img/garrafas/vinho03.png" alt="--">
-                    <h3> Sangue de Carmilla </h3>
-                    <p> R$ 290.00 </p>
-                </div>
-
-                <!-- 4. Vinho -->
-                    <div class="vinhos-item" data-desc="Um vinho que desencadeia uma tempestade de sabores audaciosos e intensos, com uma profundidade que desafia os sentidos."> 
-                        <img src="./img/garrafas/vinho04.png" alt="--">
+                        <img src="./img/garrafas/vinho03.png" alt="--">
+                        <h3> Sangue de Carmilla </h3>
+                        <p> R$ 290.00 </p>
+                    </div>
+                    
+                    <!-- 4. Vinho -->
+                        <div class="vinhos-item" data-desc="Um vinho que desencadeia uma tempestade de sabores audaciosos e intensos, com uma profundidade que desafia os sentidos."> 
+                            <img src="./img/garrafas/vinho04.png" alt="--">
                             <h3> Xamã </h3>
                             <p> R$ 540.00 </p>
-                    </div>
+                        </div>
 
-                <!-- 5. Vinho -->
-                    <div class="vinhos-item" data-desc="Com sua pureza inabalável e caráter marcante, evoca a força e a determinação da deusa grega que lhe empresta o nome.  Seus aromas intensos e sabor robusto são como um convite para uma jornada sensorial"> 
-                        <img src="./img/garrafas/vinho05.png" alt="--">
-                        <h3> Sinfonia de Artemis </h3>
-                        <p> R$ 190.00 </p>
-                    </div>
-
-                <!-- 6. Vinho -->
-                    <div class="vinhos-item" data-desc="Um vinho de bravura indomável e caráter inabalável, que desafia o paladar com sua intensidade imponente e robustez inigualável."> 
-                        <img src="./img/garrafas/vinho01.png" alt="--">
-                            <h3> Possessão </h3>
-                            <p> R$ 450.00 </p>
-                    </div> 
-            </div>
-    </section>
-
-    <footer> 
-        <div class="container-footer" id="contato"> 
-            <h1 class="Footer-Page"> Espero que sua compra tenha sido agradável!</h1>
+                        <!-- 5. Vinho -->
+                        <div class="vinhos-item" data-desc="Com sua pureza inabalável e caráter marcante, evoca a força e a determinação da deusa grega que lhe empresta o nome.  Seus aromas intensos e sabor robusto são como um convite para uma jornada sensorial"> 
+                            <img src="./img/garrafas/vinho05.png" alt="--">
+                            <h3> Sinfonia de Artemis </h3>
+                            <p> R$ 190.00 </p>
+                        </div>
+                        
+                        <!-- 6. Vinho -->
+                        <div class="vinhos-item" data-desc="Um vinho de bravura indomável e caráter inabalável, que desafia o paladar com sua intensidade imponente e robustez inigualável."> 
+                            <img src="./img/garrafas/vinho01.png" alt="--">
+                                <h3> Possessão </h3>
+                                <p> R$ 450.00 </p>
+                            </div> 
+                        </div>
+                    </section>
+                    
+                    <footer> 
+            <div class="container-footer" id="contato"> 
+                <h1 class="Footer-Page"> Espero que sua compra tenha sido agradável!</h1>
                 <h3 class="Footer-Page-h3"> Caso queira nos dar um feedback, sobre sua compra fique a vontade :) </h3>
-        
+                
                 <form id="formulario" class="formulario">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required placeholder="Digite seu nome:">
-                
+                    
                     <label for="telefone">Telefone:</label>
                     <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone:">
-                
+                    
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required placeholder="Digite seu email:">
-                
+                    
                     <label for="mensagem">Mensagem:</label>
                     <textarea id="mensagem" name="mensagem" required> </textarea>
-                
-                    <button type="submit">Enviar</button>
-                </form>
+                    
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </footer>
         </div>
-    </footer>
 
-    <script src="./js/script.js"></script>
-</body>
-</html>
+            <script src="./js/script.js"></script>
+        </body>
+        </html>
