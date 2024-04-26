@@ -3,7 +3,6 @@
     --color-dark: #000;
     --color-orange: #ffa64e; 
     --transition: .5s;
-    /* --font-body: "Madimi One", sans-serif; */ 
 }
 
 *{
@@ -33,6 +32,24 @@
 }
 
 /*              Fim Cabeçalho               */ 
+
+/*              Ínicio Menu                 */ 
+ul {
+    list-style: none;
+}
+
+a {
+    font-size: clamp(24px, 4vw, 30px);  
+    text-decoration: none;
+    color: var(--color-light); 
+    font-weight: 600;
+    transition: var(--transition); 
+} a:hover {
+    color: var(--color-orange);
+}
+
+
+/*              Fim Menu                    */ 
 
 /*              Começo Hero                 */ 
 .hero {
@@ -73,18 +90,6 @@
 }
 /*              Fim Hero                    */ 
 
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: var(--color-light); 
-    font-weight: 600;
-    transition: var(--transition); 
-} a:hover {
-    color: var(--color-orange);
-}
 
 
 .container {
@@ -138,6 +143,75 @@ a {
     width: 20%;
 }
 
-
-
 /*              Fim Vinhos                 */ 
+
+/*              Ínicio Rodapé              */ 
+.container-footer {
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(to top, rgba(49, 49, 49, 0.8), rgba(0, 0, 0, .3)), 
+    url(img/vinicola.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+} 
+
+.Footer-Page {
+    width: 100%;
+    height: 20%;
+    color: var(--color-light);
+    font-size: clamp(24px, 4vw, 50px);   
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+.Footer-Page-h3 {
+    color: var(--color-light);
+    padding: 10px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-wrap: balance;     
+    line-height: 1.7;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--color-light);
+    background-color: #f8f8f858;
+    border-radius: 5px;
+} .formulario label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-dark);
+
+} .formulario input, .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+} 
+
+.formulario button {
+    padding: 10px 20px;
+    background-color: var(--color-orange);
+    color: var(--color-light);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+} .formulario button:hover {
+    background-color: #ffa64e;
+} .formulario button:hover {
+    background-color: #ba6612;
+}
+
+/*              Fim Rodapé                 */ 
+
