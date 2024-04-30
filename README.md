@@ -24,3 +24,4 @@ Passo 5: Parabéns, você possui nosso código!
 - botão_compra | bia 
 - calculadora  | fernando 
 - login        | abner 
+- thomas       | thomas
