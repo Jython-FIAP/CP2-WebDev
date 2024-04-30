@@ -46,12 +46,15 @@ const handleLogin = (event) => {
     }
 };
 
-loginForm.addEventListener("submit", handleLogin);
+loginForm?.addEventListener("submit", handleLogin);
 
 // Formulário de Contato 
-document.getElementById('formulario').onsubmit = function(e) {
-        e.preventDefault(); 
-        alert("Sua mensagem foi enviada! Ficamos feliz com seu feedback :)");
+var form = document.getElementById('formulario')
+if(form) {
+    form.onsubmit = function(e) {
+            e.preventDefault(); 
+            alert("Sua mensagem foi enviada! Ficamos feliz com seu feedback :)");
+    }
 }
 
 // -------------------------------- // 
@@ -72,7 +75,8 @@ const botoes = document.querySelectorAll('.btn');
     botao.addEventListener('click', function() {
         var vinho_selected = this.id;
         console.log(this.id);
-        var preco = precos[vinho_selected]; 
+        var vinho = getVinhos()[vinho_selected]; 
+        var preco = vinho.preco
         if (preco !== undefined) {
             validarPreco(preco);
         } else {
@@ -81,7 +85,59 @@ const botoes = document.querySelectorAll('.btn');
     });
 });
 
-var p =0
+function getVinhos() {
+    return {
+        "Neugebauer": {
+            preco: 240,
+            comidas: [
+                "../img/comidas/pastel.png",
+                "../img/comidas/sandubao.png"
+            ]
+        },
+        "Miragem": {
+            preco: 300,
+            comidas: [
+                "../img/comidas/pastel.png",
+                "../img/comidas/esfirra.png"
+            ]
+        },
+        "Sangue": {
+            preco: 290,
+            comidas: [
+                "../img/comidas/pasta.png"
+            ]
+        },
+        "Xamã": {
+            preco: 540,
+            comidas: [
+                "../img/comidas/xeque.webp",
+                "../img/comidas/sandubao.png"
+            ]
+        },
+        "Sinfonia": {
+            preco: 190,
+            comidas: [
+                "../img/comidas/pastel.png",
+                "../img/comidas/coxinha.png"
+            ]
+        },
+        "Possessão": {
+            preco: 450,
+            comidas: [
+                "../img/comidas/coxinha.png",
+                "../img/comidas/xeque.png"
+            ]
+        }
+    }
+}
+
+function getVinhoFromUrl() {
+    const url = window.location.href; 
+    const params = new URLSearchParams(new URL(url).search); 
+    var paramValue = params.get('p');
+
+    return getVinhos()[paramValue]
+}
 
 function validarPreco(preco) { 
     if (preco >= 100 && preco <= 1000) {
@@ -91,16 +147,26 @@ function validarPreco(preco) {
     }
 }
 
+const recomendacoes = document.getElementById("recomendacoes")
+if(recomendacoes) {
+    var ul = recomendacoes.appendChild(document.createElement("ul"))
+    let vinho = getVinhoFromUrl()
+    
+    for(comida of vinho.comidas) {
+        var img = ul.appendChild(document.createElement("li")).appendChild(document.createElement("img"))
+
+        img.src = comida
+        img.width = 150
+    }
+}
+
 function calcular() {
-        const url = window.location.href; 
-        const params = new URLSearchParams(new URL(url).search); 
-        var paramValue = params.get('p');  
-        p=paramValue;
+    var vinho = getVinhoFromUrl()
 
     var qtd = parseInt(document.getElementById("qtd_vinho").value);
     var cupomValue = document.getElementById("cupom").value;
 
-    var preco = parseInt(paramValue);
+    var preco = parseInt(vinho.preco);
     var preco_total = 0;
     var preco_total = preco * qtd;
     var desconto = preco_total * 0.10;
@@ -108,8 +174,10 @@ function calcular() {
             var preco_total = preco_total-desconto;
             console.log(preco_total);
         }
-    resultado.innerText = `O preço é ${preco_total}`;
-    
+    resultado.innerText = `R$${preco_total}`;
+
+    var btn = document.getElementById("comprar-btn")
+    btn.disabled = false;
 }
 
 function mesagem_enviada(){

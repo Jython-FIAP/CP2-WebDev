@@ -8,22 +8,31 @@
 </head>
 <body>
     <div class="calculator">
-
         <div class="input-group">
             <div class="inputs">
-                <label for="cupom">Cupom de desconto: </label>
-                <input type="desconto" id="cupom">
+                <div class="input-full">
+                    <label for="cupom">Cupom de desconto: </label>
+                    <input type="desconto" id="cupom">
+                </div>
                 
-                <label for="qtd_vinho">Quantas unidades deseja comprar: </label>
-                <input type="number" id="qtd_vinho">
+                <div class="input-full">
+                    <label for="qtd_vinho">Quantas unidades deseja comprar: </label>
+                    <input type="number" id="qtd_vinho">    
+                </div>
             </div>
-                <button id="btncalculator" class="btn" onclick="calcular()">Calcular preço</button>
-    
-                <h2><strong>Resultado:</strong></h2>
-                <h1 id="resultado"></h1>
 
-                <button onClick="comprar()" class="btn">Comprar</button>
+            <button id="btncalculator" class="btn" onclick="calcular()">Calcular preço</button>
+
+            <div class="result">
+                <h2>Resultado:</h2>
+                <h3 id="resultado"></h1>
+    
+                <button id="comprar-btn" onClick="comprar()" disabled class="btn">Comprar</button>
+            </div>
         </div> 
+        <div id="recomendacoes">
+            <p>Comidas e iguarias que harmonizam com esse vinho:</p>
+        </div>
     </div>
     <script src="./js/script.js"></script>
 </body>
