@@ -41,7 +41,6 @@ const handleLogin = (event) => {
     
         container_login.style.display = "none";
         container.style.display = "block";
-     
     } else {
         alert("Dados incorretos, tente novamente.");
     }
@@ -49,15 +48,15 @@ const handleLogin = (event) => {
 
 loginForm.addEventListener("submit", handleLogin);
 
-// // Formulário de Contato 
-// document.getElementById('formulario').onsubmit = function(e) {
-//     e.preventDefault(); 
-//     alert("Sua mensagem foi enviada! Ficamos feliz com seu feedback :)");
-// }
+// Formulário de Contato 
+document.getElementById('formulario').onsubmit = function(e) {
+        e.preventDefault(); 
+        alert("Sua mensagem foi enviada! Ficamos feliz com seu feedback :)");
+}
 
-// JS 
+// -------------------------------- // 
+// Calculadora 
 document.getElementById("resultado");
-
 var precos = { // Variável preço que irá mapear o nome do vinho para o preço que ele contém 
     "Neugebauer": 240,
     "Miragem": 300,
@@ -67,6 +66,7 @@ var precos = { // Variável preço que irá mapear o nome do vinho para o preço
     "Possessão": 450
 };
 
+// Botões de Compra
 const botoes = document.querySelectorAll('.btn');
 	botoes.forEach(function(botao) {                        
     botao.addEventListener('click', function() {
@@ -80,7 +80,7 @@ const botoes = document.querySelectorAll('.btn');
         }
     });
 });
- 
+
 var p =0
 
 function validarPreco(preco) { 
@@ -105,8 +105,8 @@ function calcular() {
     var preco_total = preco * qtd;
     var desconto = preco_total * 0.10;
         if(cupomValue =="FIAP2024"){
-           var preco_total = preco_total-desconto;
-           console.log(preco_total);
+            var preco_total = preco_total-desconto;
+            console.log(preco_total);
         }
     resultado.innerText = `O preço é ${preco_total}`;
     

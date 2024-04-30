@@ -9,18 +9,17 @@
 
 </head>
 <body>
-    <section class="container_login" id="container_login">
-        <header class="Cabecalho-Page-1"> 
-        </header> 
-        <h1> VINICOLA AGNELLO </h1>
 
+    <!-- Formulário Login -->
+    <section class="container_login" id="container_login">
+        <header class="Cabecalho-Page-1"> </header> 
 
         <section class="login">
-            <h2>Faça seu Login</h2>
+            <h2>Login de Usuários</h2>
             <form class="login__form" id="loginForm">
-                <input type="text" class="login__input" id="user" placeholder="USUÁRIO" required />
-                <input type="password" class="login__input" id="password" placeholder="SENHA" required />
-                <button type="submit" class="login__button">Login</button>
+                <input type="text" class="login__input" id="user" placeholder="Digite seu nome de usuário: " required />
+                <input type="password" class="login__input" id="password" placeholder="Digite sua senha:" required />
+                <button type="submit" class="login__button">Entrar</button>
             </form>
         </section>
     </section>
@@ -32,9 +31,8 @@
             <nav>   <!-- Estrutura de navegação -->
                 <ul>
                     <li><a href="#vinhos">Vinhos</a></li>
-                    <li><a href="">Perfil</a></li>
                     <li><a href="#contato">Contato</a></li>
-                    <li><button type="button" id="Entrar" class="btn_login" onclick="Login()">Entrar</button></li>
+                    <li><a id="Entrar" onclick="Login()">Login</a> </li>    
                 </ul>
             </nav>
         </header> 

@@ -40,20 +40,32 @@
 /*              Ínicio Login                 */ 
 .Cabecalho-Page-1{
     display:inline-block;
-    height: 25dvh;
     align-content: center;
     justify-content: center;
     font-size: 3rem;
     text-shadow: 1px 1px 20px #212121;
 }
 
+.container_login{
+    background: url("../img/vinicola02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100dvh;
+    flex-direction: column;
+    display: none;
+}
+
 .login{
     width: 100%;
     max-width: 330px;
-    background-color: #212121;
+    background-color: #f8f8f858;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 3px 3px 5px var(--color-orange);
 }
 .login > h2 {
     text-align: center;
@@ -91,11 +103,8 @@
     cursor: pointer;
     color: #121212;
 }
-.login__input:focus {
-    outline: 1.7px solid var(--color-orange-focus);
-}
+
 .login__button:hover {
-    outline: 1.7px solid #ddd;
     background-color: var(--color-orange-hover);
     color: #212121;
     
@@ -106,18 +115,6 @@
     color: #f2f2f2;
 }
 
-
-.container_login{
-    background: url("../img/vinicola.jpg");
-    color: var(--color-orange-hover);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100dvh;
-    flex-direction: column;
-    display: none;
-}
 
 /*              Fim Login               */ 
 
@@ -132,6 +129,7 @@ a {
     color: var(--color-light); 
     font-weight: 600;
     transition: var(--transition); 
+    
 } a:hover {
     color: var(--color-orange);
 }
@@ -164,11 +162,9 @@ a {
 } 
 
 .btn {
-    border: 2px solid var(--color-purple) ;
     border-radius: 70px;
     padding: 8px 30px;
     transition: background-color var(--transition);
-
     background-color: #ffa64e;  
 
     &:hover {
@@ -244,25 +240,6 @@ a {
 } .vinhos-item:hover {
     transform: scale(1.1);
 }
-
-.vinhos-item::after {
-    content: attr(data-desc,h); /* Inicialmente, o conteúdo está vazio */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}.vinhos-item:hover::after {
-    opacity: 1;
-}
-
 .vinhos-item img {
     width: 20%;
 }
