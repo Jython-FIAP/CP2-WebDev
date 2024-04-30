@@ -9,11 +9,16 @@ Participantes:
 ```
 
 ## Informações sobre o Projeto 
-Página Index.Html
-- Responsável pela verificação de idade do usuário podendo assim entrar na página home.html
+Para acessar o projeto já em forma de site, utilize qualquer app de códigos, mas para a explicação vamos usar em base o VsCode.
 
-Página Home.Html 
-- Responsável por carregar todo o conteúdo principal da página
+Passo 1: Acesse o projeto na pasta main 
+Passo 2: Copie o código
+Passo 3: Abra o Vscode, e clique na parte 'clonar repositório'
+Passo 4: Clone seu repositório, escolha a pasta que ele ficará armazenado
+Passo 5: Parabéns, você possui nosso código!
 
 ## Branchs 
-main | mari 
+main         | mari 
+botão_compra | bia 
+calculadora  | fernando 
+login        | abner 
