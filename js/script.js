@@ -47,7 +47,7 @@ const handleLogin = (event) => {
     }
 };
 
-//  loginForm.addEventListener("submit", handleLogin);
+loginForm.addEventListener("submit", handleLogin);
 
 // // Formulário de Contato 
 // document.getElementById('formulario').onsubmit = function(e) {
