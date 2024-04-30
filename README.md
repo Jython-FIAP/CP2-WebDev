@@ -20,7 +20,7 @@ Passo 5: Parabéns, você possui nosso código!
 ```
 
 ## Branchs 
-main         | mari 
-botão_compra | bia 
-calculadora  | fernando 
-login        | abner 
+- main         | mari 
+- botão_compra | bia 
+- calculadora  | fernando 
+- login        | abner 
