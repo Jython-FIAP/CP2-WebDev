@@ -5,7 +5,7 @@
     --color-orange: #ffa64e; 
     --color-orange-focus: #f9ad62; 
     --color-orange-hover: #fe8f20; 
-    --color-orange-active: #a71431; 
+    --color-orange-active: #eb510a; 
     --transition: .5s;
         font-size: 16px;
 }
@@ -109,7 +109,7 @@
 
 
 .container_login{
-    background: url("../img/vinicola.jpg");
+    background: url("./img/vinicola.jpg");
     color: var(--color-orange-hover);
     display: flex;
     align-items: center;
@@ -170,7 +170,7 @@ a {
     padding: 8px 30px;
     transition: background-color var(--transition);
 
-    background-color: #ffa64e;  
+    background-color: #f15c17;  
 
     &:hover {
         background-color: transparent;
@@ -233,7 +233,7 @@ a {
 }
 
 .vinhos-item::after {
-    content: attr(data-desc); /* Inicialmente, o conteúdo está vazio */
+    content: attr(data-desc,h); /* Inicialmente, o conteúdo está vazio */
     position: absolute;
     top: 0;
     left: 0;

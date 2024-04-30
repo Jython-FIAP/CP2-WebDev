@@ -47,15 +47,67 @@ const handleLogin = (event) => {
     }
 };
 
-loginForm.addEventListener("submit", handleLogin);
+//  loginForm.addEventListener("submit", handleLogin);
 
-// -------------------------------- // 
+// // Formulário de Contato 
+// document.getElementById('formulario').onsubmit = function(e) {
+//     e.preventDefault(); 
+//     alert("Sua mensagem foi enviada! Ficamos feliz com seu feedback :)");
+// }
 
+// JS 
+document.getElementById("resultado");
 
-// Formulário de Contato 
-document.getElementById('formulario').onsubmit = function(e) {
-    e.preventDefault(); 
-    alert("Sua mensagem foi enviada! Ficamos feliz com seu feedback :)");
+var precos = { // Variável preço que irá mapear o nome do vinho para o preço que ele contém 
+    "Neugebauer": 240,
+    "Miragem": 300,
+    "Sangue": 290,
+    "Xamã": 540,
+    "Sinfonia": 190,
+    "Possessão": 450
+};
+
+const botoes = document.querySelectorAll('.btn');
+	botoes.forEach(function(botao) {                        
+    botao.addEventListener('click', function() {
+        var vinho_selected = this.id;
+        console.log(this.id);
+        var preco = precos[vinho_selected]; 
+        if (preco !== undefined) {
+            validarPreco(preco);
+        } else {
+            console.log("Vinho não encontrado.");
+        }
+    });
+});
+ 
+var p =0
+
+function validarPreco(preco) { 
+    if (preco >= 100 && preco <= 1000) {
+        console.log("Preço válido: " + preco);
+    } else {
+        console.log("Preço inválido: " + preco);
+    }
 }
 
-// -------------------------------- // 
+function calcular() {
+        const url = window.location.href; 
+        const params = new URLSearchParams(new URL(url).search); 
+        var paramValue = params.get('p');  
+        p=paramValue;
+
+    var qtd = parseInt(document.getElementById("qtd_vinho").value);
+    var cupomValue = document.getElementById("cupom").value;
+
+    var preco = parseInt(paramValue);
+    var preco_total = 0;
+    var preco_total = preco * qtd;
+    var desconto = preco_total * 0.10;
+        if(cupomValue =="FIAP2024"){
+           var preco_total = preco_total-desconto;
+           console.log(preco_total);
+        }
+    resultado.innerText = `O preço é ${preco_total}`;
+    
+}
