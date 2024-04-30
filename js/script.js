@@ -111,3 +111,7 @@ function calcular() {
     resultado.innerText = `O preço é ${preco_total}`;
     
 }
+
+function comprar(){
+    alert("Adicionado ao carrinho com sucesso")
+}
