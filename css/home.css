@@ -2,7 +2,6 @@
     --color-light: #ffffff; 
     --color-dark: #000;
     --color-orange: #ffa64e; 
-    --color-orange: #ffa64e; 
     --color-orange-focus: #f9ad62; 
     --color-orange-hover: #fe8f20; 
     --color-orange-active: #a71431; 
@@ -174,6 +173,20 @@ a {
 
     &:hover {
         background-color: transparent;
+    }
+    
+}
+
+.btn_login {
+    border: 2px solid var(--color-purple) ;
+    border-radius: 70px;
+    padding: 8px 30px;
+    transition: background-color var(--transition);
+
+    background-color: #ffa64e;  
+
+    &:hover {
+        background-color: var(--color-orange-hover);
     }
     
 }

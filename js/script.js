@@ -112,6 +112,10 @@ function calcular() {
     
 }
 
+function mesagem_enviada(){
+    alert("Mensagem enviada com sucesso")
+}
+
 function comprar(){
     alert("Adicionado ao carrinho com sucesso")
 }
